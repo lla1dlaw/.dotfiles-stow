@@ -1,0 +1,7 @@
+[user]
+	email = 95653151+lla1dlaw@users.noreply.github.com
+	name = Liam Laidlaw
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
