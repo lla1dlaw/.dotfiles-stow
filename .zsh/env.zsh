@@ -5,7 +5,7 @@ export __GLX_VENDOR_LIBRARY_NAME="mesa"
 # ================ General Exports ================
 export PICO_SDK_PATH="$HOME/pico-sdk"
 export TERM="xterm-256color"
-export EDITOR="nvim" 
+export EDITOR=$(which nvim 2>/dev/null || which vim 2>/dev/null || which nano 2>/dev/null)
 export VISUAL="$EDITOR"
 export SUDO_EDITOR="$EDITOR"
 export CUDA_ROOT="/usr/local/cuda"
