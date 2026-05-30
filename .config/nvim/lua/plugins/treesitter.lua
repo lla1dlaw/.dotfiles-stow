@@ -38,6 +38,5 @@ return {
     })
 
     vim.treesitter.language.register('bash', 'zsh')
-    vim.treesitter.language.register('tsx', 'typescript')
   end
 }
