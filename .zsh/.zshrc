@@ -18,3 +18,6 @@ source "$ZSH_CONFIG_DIR/tools.zsh"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh. 
 P10K_PATH="$ZSH_CONFIG_DIR/.p10k.zsh"
 [[ ! -f "$P10K_PATH" ]] || source "$P10K_PATH"
+
+# bun completions
+[ -s "/home/llaidlaw/.bun/_bun" ] && source "/home/llaidlaw/.bun/_bun"

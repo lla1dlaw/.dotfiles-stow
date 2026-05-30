@@ -17,8 +17,9 @@ export MANPAGER="nvim +Man!"
 export GOPATH="$HOME/go"
 export NVM_DIR="$HOME/.nvm"
 export PNPM_HOME="$HOME/.local/share/pnpm"
-
 export LD_LIBRARY_PATH="${CUDA_ROOT}/lib64:${LD_LIBRARY_PATH}"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # ================ PATH Configuration ================
 # 'typeset -U' ensures all path entries are unique (no duplicates)
