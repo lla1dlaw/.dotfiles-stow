@@ -10,13 +10,19 @@ return {
         "vim",
         "vimdoc",
         "python",
-        "c", "bash",
+        "c", 
+        "cpp",
+        "bash",
         "java",
         "rust",
         "lua",
-        "cpp",
-        "bash",
         "yaml",
+        "toml",
+        "html",
+        "css",
+        "tailwind",
+        "typescript",
+        "tsx",
       }
     }
 
@@ -32,5 +38,6 @@ return {
     })
 
     vim.treesitter.language.register('bash', 'zsh')
+    vim.treesitter.language.register('tsx', 'typescript')
   end
 }
