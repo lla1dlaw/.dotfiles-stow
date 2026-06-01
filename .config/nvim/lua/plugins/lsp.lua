@@ -15,7 +15,6 @@ return {
           "bashls", 
           "pyright", 
           "ansiblels",
-          "ts_ls",
         },
         automatic_installation = true,
         automatic_enable = true,
