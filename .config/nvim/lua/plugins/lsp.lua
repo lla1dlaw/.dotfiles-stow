@@ -34,7 +34,6 @@ return {
 		opts = {
 			ensure_installed = {
 	      "shellcheck",
-        "tree-sitter-cli",
 			},
 			auto_update = true,
 			run_on_start = true,
