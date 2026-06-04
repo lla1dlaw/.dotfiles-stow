@@ -19,7 +19,7 @@ export NVM_DIR="$HOME/.nvm"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export LD_LIBRARY_PATH="${CUDA_ROOT}/lib64:${LD_LIBRARY_PATH}"
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+
 
 # ================ PATH Configuration ================
 # 'typeset -U' ensures all path entries are unique (no duplicates)
@@ -40,6 +40,7 @@ path=(
   "$HOME/miniconda3/condabin"
   "$HOME/.nvm/versions/node/v24.2.0/bin"
   "$PNPM_HOME"
+  "$BUN_INSTALL/bin:$PATH"
 
   # 3. Specific Tool Binaries
   "${CUDA_ROOT}/bin"

@@ -15,6 +15,7 @@ return {
           "bashls", 
           "pyright", 
           "ansiblels",
+          "slint_lsp",
         },
         automatic_installation = true,
         automatic_enable = true,
