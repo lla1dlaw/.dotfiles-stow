@@ -40,7 +40,7 @@ path=(
   "$HOME/miniconda3/condabin"
   "$HOME/.nvm/versions/node/v24.2.0/bin"
   "$PNPM_HOME"
-  "$BUN_INSTALL/bin:$PATH"
+  "$BUN_INSTALL/bin"
 
   # 3. Specific Tool Binaries
   "${CUDA_ROOT}/bin"

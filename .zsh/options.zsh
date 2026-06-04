@@ -19,6 +19,9 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# disable command not found handler (prompts user to install a package for a missing command binary)
+unfunction command_not_found_handler
+
 # completion config
 zstyle ':completion:*' menu select # tab opens cmp menu
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" ma=0\;33 # colrize menu (magic shit at the end idk)
