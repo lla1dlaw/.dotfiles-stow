@@ -7,6 +7,7 @@ alias c='clear'
 alias vmdash='$HOME/bash_scripts/vmdash_login.exp'
 alias python='python3'
 alias gl='glab'
+alias bios='systemctl reboot --firmware-setup'
 
 if command -v rg &> /dev/null; then alias grep='rg'; fi
 eval "$(thefuck --alias)"
