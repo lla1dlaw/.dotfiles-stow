@@ -35,8 +35,8 @@ return {
     { "<C-l>", [[<Cmd>wincmd l<CR>]], mode = "t", { desc = "Move focus right one window" } },
     { [[<C-t>]], [[<Cmd>ToggleTerm<CR>]] },
     { "<F12>", [[<Cmd>ToggleTerm<CR>]] },
-    { "<F12>", [[<Cmd>ToggleTerm<CR>]], mode = "t" },
-    -- { "<leader>H", "<cmd>lua _clx_toggle()<CR>", { desc = "Toggle clx (console HackerNews) floating terminal" } },
+
+    { "<leader>H", "<cmd>lua _clx_toggle()<CR>", { desc = "Toggle clx (console HackerNews) floating terminal" } },
     -- { "<leader>G", "<cmd>lua _gitui_toggle()<CR>", { desc = "Toggle gitui floating terminal" } },
   },
 }

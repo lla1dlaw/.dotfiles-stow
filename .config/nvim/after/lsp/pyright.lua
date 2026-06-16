@@ -38,6 +38,33 @@ return {
       },
     },
   },
+  on_init = function(client)
+    -- Native LSP resolves the root_dir based on your root_markers.
+    local root_dir = client.root_dir or (client.workspace_folders and client.workspace_folders[1].name)
+    
+    if root_dir then
+      -- Prioritize .venv (uv default) over venv
+      local venv_paths = {
+        root_dir .. '/.venv/bin/python',
+        root_dir .. '/venv/bin/python',
+      }
+      
+      for _, path in ipairs(venv_paths) do
+        if vim.fn.executable(path) == 1 then
+          -- Safely inject the detected Python executable into Pyright's settings using the nightly syntax
+          if client.settings then
+            client.settings.python = vim.tbl_deep_extend('force', client.settings.python or {}, { pythonPath = path })
+          else
+            client.config.settings = vim.tbl_deep_extend('force', client.config.settings, { python = { pythonPath = path } })
+          end
+          
+          -- Notify Pyright of the injected environment
+          client:notify('workspace/didChangeConfiguration', { settings = nil })
+          break
+        end
+      end
+    end
+  end,
   on_attach = function(client, bufnr)
     vim.api.nvim_buf_create_user_command(bufnr, 'LspPyrightOrganizeImports', function()
       local params = {
@@ -45,9 +72,6 @@ return {
         arguments = { vim.uri_from_bufnr(bufnr) },
       }
 
-      -- Using client.request() directly because "pyright.organizeimports" is private
-      -- (not advertised via capabilities), which client:exec_cmd() refuses to call.
-      -- https://github.com/neovim/neovim/blob/c333d64663d3b6e0dd9aa440e433d346af4a3d81/runtime/lua/vim/lsp/client.lua#L1024-L1030
       ---@diagnostic disable-next-line: param-type-mismatch
       client.request('workspace/executeCommand', params, nil, bufnr)
     end, {
@@ -60,4 +84,3 @@ return {
     })
   end,
 }
-
