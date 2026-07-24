@@ -22,3 +22,6 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # linuxbrew shell environment setup
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# fnm shell setup
+eval "$(fnm env --use-on-cd --shell zsh)"

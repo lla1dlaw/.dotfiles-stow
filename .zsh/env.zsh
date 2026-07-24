@@ -49,6 +49,7 @@ path=(
   "$HOME/.local/share/minisign-linux/x86_64"
   "$HOME/.local/share/minisign-linux"
   "/opt/nvim-linux-x86_64/bin"
+  "$HOME/.nix-profile/bin"
 
   # 4. Existing System Paths (usr/bin, etc.)
   $path

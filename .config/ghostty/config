@@ -69,3 +69,9 @@ window-padding-y = 15
 # make zsh the default shell
 command = /usr/bin/zsh -l -i
 
+# keybinds
+keybind = ctrl+-=close_surface
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+l=goto_split:right
