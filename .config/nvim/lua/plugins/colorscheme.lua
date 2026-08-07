@@ -8,7 +8,7 @@ return {
     transparent = true,
   },
   config = function()
-    vim.cmd.colorscheme("tokyonight")
+    vim.cmd.colorscheme("tokyonight-night")
   end,
 }
 

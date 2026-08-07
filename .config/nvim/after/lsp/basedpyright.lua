@@ -17,7 +17,7 @@ end
 
 ---@type vim.lsp.Config
 return {
-  cmd = { 'pyright-langserver', '--stdio' },
+  cmd = { 'basedpyright-langserver', '--stdio' },
   filetypes = { 'python' },
   root_markers = {
     'pyrightconfig.json',
@@ -66,9 +66,9 @@ return {
     end
   end,
   on_attach = function(client, bufnr)
-    vim.api.nvim_buf_create_user_command(bufnr, 'LspPyrightOrganizeImports', function()
+    vim.api.nvim_buf_create_user_command(bufnr, 'LspBasedPyrightOrganizeImports', function()
       local params = {
-        command = 'pyright.organizeimports',
+        command = 'basedpyright.organizeimports',
         arguments = { vim.uri_from_bufnr(bufnr) },
       }
 
@@ -77,8 +77,8 @@ return {
     end, {
       desc = 'Organize Imports',
     })
-    vim.api.nvim_buf_create_user_command(bufnr, 'LspPyrightSetPythonPath', set_python_path, {
-      desc = 'Reconfigure pyright with the provided python path',
+    vim.api.nvim_buf_create_user_command(bufnr, 'LspBasedPyrightSetPythonPath', set_python_path, {
+      desc = 'Reconfigure basedpyright with the provided python path',
       nargs = 1,
       complete = 'file',
     })

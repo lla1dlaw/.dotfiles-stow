@@ -4,8 +4,8 @@ return {
   config = function()
     require'nvim-treesitter'.setup {
       auto_install = true,
-      highlight = { enabled=true },
-      indent = { enabled=true },
+      highlight = { enable = true },
+      indent = { enable = true },
       ensure_installed = {
         "vim",
         "vimdoc",

@@ -9,6 +9,7 @@ vim.o.relativenumber=true
 vim.o.number=true
 vim.o.cursorline=true
 vim.o.wrap=false
+vim.o.colorcolumn = "80"
 
 -- add filetype support for vim doge
 vim.cmd([[filetype plugin on]])

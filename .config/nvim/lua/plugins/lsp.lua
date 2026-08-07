@@ -1,40 +1,41 @@
 return {
-  {
-    "neovim/nvim-lspconfig",
-    dependencies = {
-      "mason-org/mason.nvim", 
-      "williamboman/mason-lspconfig.nvim",
-    },
+	{
+		"neovim/nvim-lspconfig",
+		dependencies = {
+			"mason-org/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+		},
 
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "rust_analyzer",
-          "clangd", 
-          "bashls", 
-          "pyright", 
-          "ansiblels",
-          "slint_lsp",
-        },
-        automatic_installation = true,
-        automatic_enable = true,
-      })
-    end,
-  },
-  {
-    "mason-org/mason-lspconfig.nvim",
-    opts = { },
-    dependencies = {
-        { "mason-org/mason.nvim", opts = {} },
-        "neovim/nvim-lspconfig",
-    },
-  },
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"lua_ls",
+					"rust_analyzer",
+					"clangd",
+					"bashls",
+					"basedpyright",
+					"ansiblels",
+					"slint_lsp",
+                    "html",
+				},
+				automatic_installation = true,
+				automatic_enable = true,
+			})
+		end,
+	},
+	{
+		"mason-org/mason-lspconfig.nvim",
+		opts = {},
+		dependencies = {
+			{ "mason-org/mason.nvim", opts = {} },
+			"neovim/nvim-lspconfig",
+		},
+	},
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		opts = {
 			ensure_installed = {
-	      "shellcheck",
+				"shellcheck",
 			},
 			auto_update = true,
 			run_on_start = true,
@@ -59,8 +60,8 @@ return {
 				"ruff",
 				"prettier",
 				"stylua",
-        "ansible-lint",
-        "eslint-lsp",
+				"ansible-lint",
+				"eslint-lsp",
 			},
 			automatic_installation = true,
 			handlers = {},
