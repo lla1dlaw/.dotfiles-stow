@@ -24,4 +24,6 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # fnm shell setup
-eval "$(fnm env --use-on-cd --shell zsh)"
+if command -v fnm &> /dev/null; then 
+    eval "$(fnm env --use-on-cd --shell zsh)"
+fi
