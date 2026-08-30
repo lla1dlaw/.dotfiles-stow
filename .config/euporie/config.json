@@ -12,15 +12,19 @@
     "autoformat": true,
     "key_bindings": {
       "euporie.core.widgets.inputs:TextInput": {
-        "exit-edit-mode": ["j k"]
+        "exit-edit-mode": [
+          "j k"
+        ]
       }
     }
   },
   "console": {
-      "edit_mode": "vi",
-      "key_bindings": {
-      "euporie.core.widgets.inputs:TextInput": {
-        "exit-edit-mode": ["j k"]
+    "edit_mode": "vi",
+    "key_bindings": {
+      "euporie.core.key_binding.bindings.basic:TextEntry": {
+        "exit-edit-mode": [
+          "j k"
+        ]
       }
     }
   }
