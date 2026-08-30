@@ -75,3 +75,4 @@ keybind = ctrl+k=goto_split:up
 keybind = ctrl+j=goto_split:down
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+l=goto_split:right
+keybind = ctrl+enter=unbind # for jupyter notebooks (ctrl+enter is "run cell")

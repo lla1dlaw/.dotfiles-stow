@@ -8,6 +8,7 @@ return {
 		require("jupynvim").setup({
 			log_level = "info",
 			image_renderer = "kitty", -- "placeholder", "kitty", or "chafa"
+            smooth_scroll = true,
 		})
 	end,
 }

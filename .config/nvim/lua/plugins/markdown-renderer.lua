@@ -4,7 +4,6 @@ return {
 	opts = {
 		file_types = {
 			"markdown",
-			"ipynb",
 		},
 	},
 }

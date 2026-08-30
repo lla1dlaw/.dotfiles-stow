@@ -23,6 +23,8 @@ return {
         "tailwind",
         "typescript",
         "tsx",
+        "markdown",
+        "markdown_inline",
       }
     }
 
