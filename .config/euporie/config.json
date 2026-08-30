@@ -1,0 +1,27 @@
+{
+  "notebook": {
+    "recent_files": [
+      "/home/llaidlaw/projects/deep-learning/hw1/CS4343_HW1.ipynb"
+    ],
+    "color_scheme": "dark",
+    "syntax_theme": "one-dark",
+    "edit_mode": "vi",
+    "enable_language_servers": true,
+    "autoinspect": true,
+    "autocomplete": true,
+    "autoformat": true,
+    "key_bindings": {
+      "euporie.core.widgets.inputs:TextInput": {
+        "exit-edit-mode": ["j k"]
+      }
+    }
+  },
+  "console": {
+      "edit_mode": "vi",
+      "key_bindings": {
+      "euporie.core.widgets.inputs:TextInput": {
+        "exit-edit-mode": ["j k"]
+      }
+    }
+  }
+}
