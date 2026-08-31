@@ -25,16 +25,12 @@ return {
             gitsigns = { enabled = true },
             tmux = { enabled = true },
         },
+
         on_open = function(win)
-            -- stuff that should happen when zen_mode opens
-        end,
+        end, 
 
         on_close = function(win)
-            -- stuff that should happen when zen_mode closes
-            
-            -- repeat the last command that closed zen_mode. 
-            -- Ex. ":wq" will execute ":wq" on the buffer that remains after zenmode closes
-            vim.cmd("normal! @:")
+            vim.cmd('q')
         end,
 	},
 
