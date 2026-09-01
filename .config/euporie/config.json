@@ -1,14 +1,17 @@
 {
   "notebook": {
     "recent_files": [
+      "/home/llaidlaw/projects/deep_learning/rec1/CS4343_Recitation1_MNIST_MLP.ipynb",
+      "/home/llaidlaw/Downloads/CS4343_Recitation1_MNIST_MLP.ipynb",
+      "/home/llaidlaw/projects/deep_learning/hw1/CS4343_HW1.ipynb",
       "/home/llaidlaw/projects/deep-learning/hw1/CS4343_HW1.ipynb"
     ],
     "color_scheme": "dark",
     "syntax_theme": "one-dark",
     "edit_mode": "vi",
     "enable_language_servers": true,
-    "autoinspect": true,
-    "autocomplete": true,
+    "autoinspect": false,
+    "autocomplete": false,
     "autoformat": true,
     "key_bindings": {
       "euporie.core.widgets.inputs:TextInput": {
