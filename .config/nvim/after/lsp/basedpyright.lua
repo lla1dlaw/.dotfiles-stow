@@ -2,7 +2,7 @@ local function set_python_path(command)
 	local path = command.args
 	local clients = vim.lsp.get_clients({
 		bufnr = vim.api.nvim_get_current_buf(),
-		name = "pyright",
+		name = "basedpyright",
 	})
 	for _, client in ipairs(clients) do
 		if client.settings then
@@ -30,7 +30,7 @@ return {
 		".git",
 	},
 	settings = {
-		python = {
+		basedpyright = {
 			analysis = {
 				autoSearchPaths = true,
 				useLibraryCodeForTypes = true,
