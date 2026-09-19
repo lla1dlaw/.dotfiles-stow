@@ -7,20 +7,27 @@ return {
 		},
 
 		config = function()
+			local servers = {
+				"lua_ls",
+				"rust_analyzer",
+				"clangd",
+				"bashls",
+				"basedpyright",
+				"ansiblels",
+				"slint_lsp",
+				"html",
+			}
+
 			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"lua_ls",
-					"rust_analyzer",
-					"clangd",
-					"bashls",
-					"basedpyright",
-					"ansiblels",
-					"slint_lsp",
-                    "html",
-				},
+				ensure_installed = servers,
 				automatic_installation = true,
-				automatic_enable = true,
 			})
+
+			-- Use the new vim.lsp API to set up global capabilities and enable servers
+			vim.lsp.config("*", {
+				capabilities = require("blink.cmp").get_lsp_capabilities(),
+			})
+			vim.lsp.enable(servers)
 		end,
 	},
 	{

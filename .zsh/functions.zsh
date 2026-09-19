@@ -40,3 +40,15 @@ function expand-or-complete-with-dots() {
 }
 zle -N expand-or-complete-with-dots
 bindkey '^I' expand-or-complete-with-dots
+
+# Connect to the VPN.
+# sudo -b allows you to enter your password before it gets sent to background
+# -qq silences most output so it doesn't fill your terminal with logs
+wpi-vpn-connect() {
+    sudo -Eb gpclient connect --browser default -qq globalprotect.wpi.edu
+}
+
+# Closes the VPN with SIGINT (same as ^C if it were running in foreground)
+wpi-vpn-disconnect() {
+    sudo pkill -SIGINT gpclient
+}
