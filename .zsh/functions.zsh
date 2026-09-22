@@ -50,5 +50,5 @@ wpi-vpn-connect() {
 
 # Closes the VPN with SIGINT (same as ^C if it were running in foreground)
 wpi-vpn-disconnect() {
-    sudo pkill -SIGINT gpclient
+    sudo pkill -9 gpclient
 }

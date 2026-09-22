@@ -16,6 +16,7 @@ return {
 				"ansiblels",
 				"slint_lsp",
 				"html",
+                "tinymist",
 			}
 
 			require("mason-lspconfig").setup({

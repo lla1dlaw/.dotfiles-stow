@@ -63,7 +63,11 @@ end
 
 ---@type vim.lsp.Config
 return {
-  cmd = { 'clangd' },
+  cmd = { 
+      'clangd',
+      -- clangd doesn't accept yaml for fallback-style. An invalid fallback style breaks clang-format reading completely.
+      -- To set a global default, it's better to place a .clang-format file in your home directory (~/.clang-format).
+  },
   filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
   root_markers = {
     '.clangd',
