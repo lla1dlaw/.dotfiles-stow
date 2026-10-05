@@ -1,1 +1,1 @@
-require("typst-preview").start()
+-- require("typst-preview").start()
