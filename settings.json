@@ -1,0 +1,27 @@
+{
+  "allowNonWorkspaceAccess": true,
+  "editor": "nvim",
+  "editorMode": "vim",
+  "model": "Gemini 3.1 Pro (High)",
+  "trustedWorkspaces": [
+    "/home/llaidlaw/.dotfiles-stow",
+    "/home/llaidlaw/local/mullvadvpn-app",
+    "/home/llaidlaw",
+    "/home/llaidlaw/projects/va_localization",
+    "/home/llaidlaw/.config/nvim",
+    "/home/llaidlaw/projects/personal/term-type",
+    "/home/llaidlaw/.config/nvim/after/lsp",
+    "/home/llaidlaw/projects/va-qt-demo-v1",
+    "/home/llaidlaw/Downloads",
+    "/home/llaidlaw/Projects/deep_learning/hw2",
+    "/home/llaidlaw/Projects/personal/calc",
+    "/home/llaidlaw/Projects/deep_learning/hw1",
+    "/home/llaidlaw/Projects/va-pyqt",
+    "/home/llaidlaw/Projects/personal/path-search",
+    "/home/llaidlaw/.config/nvim/lua/plugins",
+    "/home/llaidlaw/Projects/deep_learning/music_classification/src",
+    "/home/llaidlaw/Projects/deep_learning/music_classification",
+    "/home/llaidlaw/Projects/deep_learning/music_classification/experiments/alexnet_control/src"
+  ],
+  "vimInsertFirst": true
+}
