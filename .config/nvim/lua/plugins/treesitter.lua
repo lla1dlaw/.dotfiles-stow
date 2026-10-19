@@ -1,5 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  branch = "main",
   build = ":TSUpdate",
   config = function()
     require'nvim-treesitter'.setup {
@@ -23,6 +24,7 @@ return {
         "tailwind",
         "typescript",
         "tsx",
+        "typst",
         "markdown",
         "markdown_inline",
       }

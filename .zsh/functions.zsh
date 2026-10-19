@@ -45,7 +45,7 @@ bindkey '^I' expand-or-complete-with-dots
 # sudo -b allows you to enter your password before it gets sent to background
 # -qq silences most output so it doesn't fill your terminal with logs
 wpi-vpn-connect() {
-    sudo -Eb gpclient connect --browser default -qq globalprotect.wpi.edu
+    sudo -Eb gpclient connect -qq globalprotect.wpi.edu
 }
 
 # Closes the VPN with SIGINT (same as ^C if it were running in foreground)

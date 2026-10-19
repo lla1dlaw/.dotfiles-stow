@@ -55,3 +55,8 @@ path=(
   $path
 )
 export PATH
+
+# export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}\
+# /home/llaidlaw/.local/share/matlab/bin/glnxa64:\
+# /home/llaidlaw/.local/share/matlab/sys/os/glnxa64:\
+# /home/llaidlaw/.local/share/matlab/extern/bin/glnxa64"
