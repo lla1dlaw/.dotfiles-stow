@@ -8,15 +8,12 @@ return {
       highlight = { enable = true },
       indent = { enable = true },
       ensure_installed = {
-        "vim",
-        "vimdoc",
         "python",
         "c", 
         "cpp",
         "bash",
         "java",
         "rust",
-        "lua",
         "yaml",
         "toml",
         "html",
@@ -25,7 +22,6 @@ return {
         "typescript",
         "tsx",
         "typst",
-        "markdown",
         "markdown_inline",
       }
     }

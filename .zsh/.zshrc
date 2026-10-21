@@ -21,3 +21,11 @@ P10K_PATH="$ZSH_CONFIG_DIR/.p10k.zsh"
 
 # bun completions
 [ -s "/home/llaidlaw/.bun/_bun" ] && source "/home/llaidlaw/.bun/_bun"
+
+# pnpm
+export PNPM_HOME="/home/llaidlaw/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
