@@ -22,6 +22,6 @@ return {
     },
 
     keys = {
-        { 'C--', '<CMD>Oil<CR>', desc = 'Open parent directory' }
+        { '<leader>-', '<CMD>Oil<CR>', desc = 'Open parent directory' }
     }
 }
