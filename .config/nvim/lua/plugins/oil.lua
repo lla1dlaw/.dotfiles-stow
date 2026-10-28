@@ -1,15 +1,27 @@
 return {
-  'stevearc/oil.nvim',
-  ---@module 'oil'
-  ---@type oil.SetupOpts
-  opts = {},
-  -- Optional dependencies
-  -- dependencies = { { "nvim-mini/mini.icons", opts = {} } },
-  dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-  -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
-  lazy = false,
-  config = function()
-    require("oil").setup() 
-  end,
-  
+	"stevearc/oil.nvim",
+	lazy = false, 
+	dependencies = {
+        "nvim-tree/nvim-web-devicons",
+    }, 
+	opts = {
+        delete_to_trash = true, -- use system trash 
+        default_file_explorer = true,  -- replace netrw
+        columns = { 'icon', 'size' },
+        keymaps = {
+            ['<CR>'] = 'actions.select',
+            ['-']    = 'actions.parent',
+            ['_']    = 'actions.open_cwd',
+        },
+        view_options = { 
+            show_hidden = true,
+            is_always_hidden = function(name, _)
+                return name == "." or name == ".."
+            end,
+        },
+    },
+
+    keys = {
+        { 'C--', '<CMD>Oil<CR>', desc = 'Open parent directory' }
+    }
 }

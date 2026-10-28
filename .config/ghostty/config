@@ -70,7 +70,7 @@ maximize = true
 command = /usr/bin/zsh -l -i
 
 # keybinds
-keybind = ctrl+-=close_surface
+# keybind = ctrl+-=close_surface
 keybind = ctrl+k=goto_split:up
 keybind = ctrl+j=goto_split:down
 keybind = ctrl+h=goto_split:left
