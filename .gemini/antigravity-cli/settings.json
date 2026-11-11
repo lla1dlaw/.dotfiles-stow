@@ -1,6 +1,14 @@
 {
-  "model": "Gemini 3.1 Pro (Low)",
+  "editor": "nvim",
+  "editorMode": "vim",
+  "model": "Gemini 3.8 Flash (High)",
   "trustedWorkspaces": [
-    "/home/llaidlaw/Projects/deep_learning/music_classification"
+    "/home/llaidlaw/Projects/deep_learning/music_classification",
+    "/home/llaidlaw",
+    "/home/llaidlaw/Projects/va-pyqt",
+    "/home/llaidlaw/Projects/deep_learning/music_classification/src/modules",
+    "/home/llaidlaw/.dotfiles-stow/.config/nvim/lua/plugins",
+    "/home/llaidlaw/.config/nvim/lua/plugins",
+    "/home/llaidlaw/Projects/va-pyqt/src"
   ]
 }

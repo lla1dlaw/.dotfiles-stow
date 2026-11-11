@@ -32,3 +32,4 @@ esac
 
 # Added by the Hunk installer (https://hunk.dev)
 export PATH='/home/llaidlaw/.hunk/bin':"$PATH"
+. "/home/llaidlaw/.deno/env"

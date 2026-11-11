@@ -5,6 +5,7 @@ return {
 		{ "chomosuke/typst-preview.nvim", lazy = true },
 		-- CSV
 		{ "hat0uma/csvview.nvim", lazy = true },
+        { "toppair/peek.nvim", lazy = true, build = "deno task --quiet build:fast" },
 	},
 	opts = {},
 	keys = {
