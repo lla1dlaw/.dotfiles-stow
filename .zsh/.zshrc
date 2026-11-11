@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+fpath=(~/.zsh/completions $fpath)
 # source zsh configuration file
 ZSH_CONFIG_DIR="$HOME/.zsh"
 source "$ZSH_CONFIG_DIR/env.zsh"

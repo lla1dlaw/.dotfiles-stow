@@ -1,4 +1,3 @@
-
 # plugin manager spec
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 if [ ! -d "$ZINIT_HOME" ]; then # install zinit if it's data directory is not found
@@ -20,9 +19,20 @@ function zvm_config() {
 zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
 ZVM_CLIPBOARD_ENABLED=true
 
+
 # auto load competions
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+autoload -Uz bashcompinit # bash completion compatibility
 autoload -U colors && colors
+
+# cache completions for the day
+if [ "$(find ~/.zcompdump -mtime +1 2>/dev/null)" ] || [ ! -f ~/.zcompdump ]; then
+  compinit
+  bashcompinit
+else
+  compinit -C
+  bashcompinit -C
+fi
 
 # prompt setup
 zinit ice depth="1"
